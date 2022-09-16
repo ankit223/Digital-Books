@@ -1,0 +1,41 @@
+<form>
+    <div class="row" class="border borer-dark">
+        <div class="col text-center p-2 mb-2 ">
+            <span class="fs-4">Create Books</span>
+        </div>
+    </div>
+    <div class="form-row">
+        <label class="col-sm-3 ">Title:</label>
+        <input [(ngModel)]='book.title' name='title' class="text-center" />
+    </div>
+    <div class="form-row">
+        <label class="col-sm-3 ">logo:</label>
+        <input [(ngModel)]='book.logo' name='logo' class="text-center" />
+    </div>
+    <div class="form-row">
+        <label class="col-sm-3">Category:</label>
+        <input [(ngModel)]='book.category' name='book.category' class="text-center" />
+    </div>
+    <div class="form-row">
+        <label class="col-sm-3">Price</label>
+        <input [(ngModel)]='book.price' type='number' name='price' class="text-center" />
+    </div>
+
+    <div class="form-row">
+        <label class="col-sm-3">Author:</label>
+        <input [(ngModel)]='book.author' name='author' class="text-center" />
+    </div>
+    <div class="form-row">
+        <label class="col-sm-3">Publisher:</label>
+        <input [(ngModel)]='book.publisher' name='publisher'  class="text-center"/>
+    </div>
+    <div class="form-row">
+        <label class="col-sm-3">Content:</label>
+        <input [(ngModel)]='book.content' name='content' class="text-center"/>
+    </div>
+    <div class="form-row">
+        <label class="col-sm-3">active:</label>
+        <input [(ngModel)]='book.active' name='active' class="text-center"/>
+    </div>
+    <button (click)='save()' class='btn btn-success' > Save</button>
+</form>

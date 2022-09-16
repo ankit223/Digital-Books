@@ -1,0 +1,27 @@
+<p>Search Books/p>
+<div class="form-row">
+    <label class="col-sm-3">Category:</label>
+    <input [(ngModel)]='book.category' name='book.category' class="text-center" />
+</div>
+<div class="form-row">
+    <label class="col-sm-3">Price</label>
+    <input [(ngModel)]='book.price' type='number' name='price' class="text-center" />
+</div>
+
+<div class="form-row">
+    <label class="col-sm-3">Author:</label>
+    <input [(ngModel)]='book.author' name='author' class="text-center" />
+</div>
+<div class="form-row">
+    <label class="col-sm-3">Publisher:</label>
+    <input [(ngModel)]='book.publisher' name='publisher'  class="text-center"/>
+</div>
+<button class="btn btn-primary" (click)='searchBooks()'>Search</button>
+<p>Search Results are</p>
+
+<ol>
+    <li *ngFor='let book of books'>
+        {{book.title }},
+        {{book.logo}},{{book.category}},{{book.price}},{{book.author}},{{book.publisher}},{{book.content}},{{book.active}}
+    </li>
+</ol>
